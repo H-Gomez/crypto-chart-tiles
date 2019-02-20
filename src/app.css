@@ -1,0 +1,15 @@
+.selector-wrap {
+    padding: 20px 10px;
+    border-bottom: 1px solid black;
+    width: 31.5%;
+    display: inline-block;
+}
+
+.selector-wrap label {
+    display: inline;
+}
+
+.selector-wrap select {
+    display: block;
+    margin-bottom: 5px;
+}
