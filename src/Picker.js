@@ -45,6 +45,21 @@ class Picker extends React.Component {
                     exchange: "",
                     symbol: "",
                     options: []
+                },
+                a3: {
+                    exchange: "",
+                    symbol: "",
+                    options: []
+                },
+                b3: {
+                    exchange: "",
+                    symbol: "",
+                    options: []
+                },
+                c3: {
+                    exchange: "",
+                    symbol: "",
+                    options: []
                 }
             }
         };
@@ -55,7 +70,7 @@ class Picker extends React.Component {
     }
 
     /**
-     * Creates a URL based on the current choices from the select inputs which are 
+     * Creates a URL based on the current choices from the select inputs which are
      * stored in the components state. Is called after a symbol is chosen.
      */
     urlBuilder() {
@@ -64,7 +79,11 @@ class Picker extends React.Component {
         let url = "";
 
         for (var key in _selections) {
-            url += `${_selections[key].exchange}%3A${_selections[key].symbol}%2C`;
+            if (_selections[key].exchange === "") {
+                continue;
+            } else {
+                url += `${_selections[key].exchange}%3A${_selections[key].symbol}%2C`;
+            }
         }
 
         this.setState({
@@ -123,9 +142,9 @@ class Picker extends React.Component {
     // Render out a Pet class for each item in the API response.
     render() {
         return (
-            <div className="search">
+            <div className="container">
                 <div className="row">
-                    <h3>Row 1</h3>
+                    <h4>Row 1</h4>
                     <div className="selector-wrap">
                         <label htmlFor="exchange-a1">
                             Exchange
@@ -238,7 +257,7 @@ class Picker extends React.Component {
                 {/* ------ New Row ------*/}
 
                 <div className="row">
-                    <h3>Row 2</h3>
+                    <h4>Row 2</h4>
                     <div className="selector-wrap">
                         <label htmlFor="exchange-a2">
                             Exchange
@@ -348,7 +367,120 @@ class Picker extends React.Component {
                     </div>
                 </div>
 
-                <a href="/">Get Charts</a>
+                {/* ------ New Row ------*/}
+
+                <div className="row">
+                    <h4>Row 2</h4>
+                    <div className="selector-wrap">
+                        <label htmlFor="exchange-a3">
+                            Exchange
+                            <select
+                                id="exchange-a3"
+                                value={this.state.selections.a3.exchange}
+                                onChange={this.handleExchangeChange}
+                                onBlur={this.handleExchangeChange}
+                            >
+                                <option>Select</option>
+                                {this.state.exchanges.map(exchange => (
+                                    <option key={exchange} value={exchange}>
+                                        {exchange}
+                                    </option>
+                                ))}
+                            </select>
+                        </label>
+                        <label htmlFor="symbol-a3">
+                            Symbol
+                            <select
+                                id="symbol-a3"
+                                value={this.state.selections.a3.symbol}
+                                onChange={this.handleSymbolChange}
+                                onBlur={this.handleSymbolChange}
+                                disabled={this.state.selections.a3.options.length === 0}
+                            >
+                                <option>Select</option>
+                                {this.state.selections.a3.options.map(exchange => (
+                                    <option key={exchange} value={exchange}>
+                                        {exchange}
+                                    </option>
+                                ))}
+                            </select>
+                        </label>
+                    </div>
+
+                    <div className="selector-wrap">
+                        <label htmlFor="exchange-b3">
+                            Exchange
+                            <select
+                                id="exchange-b3"
+                                value={this.state.selections.b3.exchange}
+                                onChange={this.handleExchangeChange}
+                                onBlur={this.handleExchangeChange}
+                            >
+                                <option>Select</option>
+                                {this.state.exchanges.map(exchange => (
+                                    <option key={exchange} value={exchange}>
+                                        {exchange}
+                                    </option>
+                                ))}
+                            </select>
+                        </label>
+                        <label htmlFor="symbol-b3">
+                            Symbol
+                            <select
+                                id="symbol-b3"
+                                value={this.state.selections.b3.symbol}
+                                onChange={this.handleSymbolChange}
+                                onBlur={this.handleSymbolChange}
+                                disabled={this.state.selections.b3.options.length === 0}
+                            >
+                                <option>Select</option>
+                                {this.state.selections.b3.options.map(exchange => (
+                                    <option key={exchange} value={exchange}>
+                                        {exchange}
+                                    </option>
+                                ))}
+                            </select>
+                        </label>
+                    </div>
+
+                    <div className="selector-wrap">
+                        <label htmlFor="exchange-c3">
+                            Exchange
+                            <select
+                                id="exchange-c3"
+                                value={this.state.selections.c3.exchange}
+                                onChange={this.handleExchangeChange}
+                                onBlur={this.handleExchangeChange}
+                            >
+                                <option>Select</option>
+                                {this.state.exchanges.map(exchange => (
+                                    <option key={exchange} value={exchange}>
+                                        {exchange}
+                                    </option>
+                                ))}
+                            </select>
+                        </label>
+                        <label htmlFor="symbol-c3">
+                            Symbol
+                            <select
+                                id="symbol-c3"
+                                value={this.state.selections.c3.symbol}
+                                onChange={this.handleSymbolChange}
+                                onBlur={this.handleSymbolChange}
+                                disabled={this.state.selections.c3.options.length === 0}
+                            >
+                                <option>Select</option>
+                                {this.state.selections.c3.options.map(exchange => (
+                                    <option key={exchange} value={exchange}>
+                                        {exchange}
+                                    </option>
+                                ))}
+                            </select>
+                        </label>
+                    </div>
+                </div>
+
+                <a href={this.state.targetUrl} className="btn btn-primary">Get Charts  🚀 </a>
             </div>
         );
     }

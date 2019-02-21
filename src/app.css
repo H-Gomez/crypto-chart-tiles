@@ -1,15 +1,40 @@
+body {
+    background: #f2f2f2;
+}
+
+.row {
+    padding: 20px;
+    border-bottom: 1px solid #dadada;
+}
+
+.container {
+    background: #fff;
+    border-radius: 4px;
+    margin-top: 1em;
+}
+
 .selector-wrap {
-    padding: 20px 10px;
-    border-bottom: 1px solid black;
+    margin: 10px 0;
     width: 31.5%;
     display: inline-block;
 }
 
 .selector-wrap label {
-    display: inline;
+    margin-right: 10px;
 }
 
 .selector-wrap select {
+    border-radius: 0px;
     display: block;
-    margin-bottom: 5px;
+    font-weight: 400;
+    width: 110px;
+}
+
+select:disabled, optgroup:disabled, option:disabled, select[disabled] > option {
+    color: grey !important;
+    background:#e2e2e2;
+}
+
+.btn {
+    margin: 20px 0;
 }

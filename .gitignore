@@ -32,3 +32,4 @@ config/
 
 # Parcel
 .cache
+/dist
