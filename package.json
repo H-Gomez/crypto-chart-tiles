@@ -2,17 +2,18 @@
   "name": "chart-tiles",
   "version": "1.0.0",
   "description": "",
-  "main": "src/App.js",
+  "main": "App.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write \"src/**/*.{js,jsx,css,html,json}\"",
-    "lint": "eslint src/**.{js,jsx}",
+    "lint": "eslint \"src/**/*.{js,jsx}\"",
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html",
-    "start": "app.js"
+    "build-parcel": "parcel build src/index.html",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  
-  "author": "",
+  "author": "Harvey Gomez",
   "license": "ISC",
   "devDependencies": {
     "eslint": "^5.13.0",
@@ -26,6 +27,16 @@
   "dependencies": {
     "@reach/router": "^1.2.1",
     "react": "^16.8.2",
-    "react-dom": "^16.8.2"
-  }
+    "react-dom": "^16.8.2",
+    "compression": "^1.7.3",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "react-scripts": "2.1.5"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
