@@ -30,9 +30,12 @@ body {
     width: 110px;
 }
 
-select:disabled, optgroup:disabled, option:disabled, select[disabled] > option {
+select:disabled,
+optgroup:disabled,
+option:disabled,
+select[disabled] > option {
     color: grey !important;
-    background:#e2e2e2;
+    background: #e2e2e2;
 }
 
 .btn {

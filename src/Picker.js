@@ -480,7 +480,9 @@ class Picker extends React.Component {
                     </div>
                 </div>
 
-                <a href={this.state.targetUrl} className="btn btn-primary">Get Charts  🚀 </a>
+                <a href={this.state.targetUrl} className="btn btn-primary">
+                    Get Charts 🚀{" "}
+                </a>
             </div>
         );
     }

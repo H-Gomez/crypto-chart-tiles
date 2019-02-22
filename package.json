@@ -2,13 +2,14 @@
   "name": "chart-tiles",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/App.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write \"src/**/*.{js,jsx,css,html,json}\"",
     "lint": "eslint src/**.{js,jsx}",
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "build": "parcel build src/index.html",
+    "start": "app.js"
   },
   
   "author": "",
