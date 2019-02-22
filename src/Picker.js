@@ -1,5 +1,6 @@
 import React from "react";
-import allCoins from "./symbols";
+import allCoins from "./symbols.json";
+import "./App.css";
 
 /**
  * Charts tiles are in the following layout
@@ -370,7 +371,7 @@ class Picker extends React.Component {
                 {/* ------ New Row ------*/}
 
                 <div className="row">
-                    <h4>Row 2</h4>
+                    <h4>Row 3</h4>
                     <div className="selector-wrap">
                         <label htmlFor="exchange-a3">
                             Exchange
@@ -481,7 +482,7 @@ class Picker extends React.Component {
                 </div>
 
                 <a href={this.state.targetUrl} className="btn btn-primary">
-                    Get Charts 🚀{" "}
+                    Get Charts <span>🚀</span>
                 </a>
             </div>
         );

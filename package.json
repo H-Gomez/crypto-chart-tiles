@@ -2,12 +2,10 @@
   "name": "chart-tiles",
   "version": "1.0.0",
   "description": "",
-  "main": "App.js",
   "scripts": {
     "format": "prettier --write \"src/**/*.{js,jsx,css,html,json}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\"",
     "dev": "parcel src/index.html",
-    "build-parcel": "parcel build src/index.html",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -20,7 +18,6 @@
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
-    "parcel-bundler": "^1.11.0",
     "prettier": "^1.16.4"
   },
   "dependencies": {

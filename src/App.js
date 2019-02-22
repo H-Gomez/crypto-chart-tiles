@@ -1,18 +1,16 @@
-// Vendor imports
-import React from "react";
-//import { render } from "react-dom";
+import React, { Component } from "react";
 import { Router } from "@reach/router";
 import Picker from "./Picker";
 import "./App.css";
 import "./bootstrap.css";
 
-class App extends React.Component {
+class App extends Component {
     render() {
         return (
             <div className="App">
                 <div className="container">
                     <header>
-                        <h1>Chart Tile Picker</h1>
+                        <h1>Crypto Chart Picker</h1>
                         <p>
                             Allows you to pick which markets show in the chart grid on the{" "}
                             <a href="https://cryptotrading.toys">https://cryptotrading.toys</a> website.
