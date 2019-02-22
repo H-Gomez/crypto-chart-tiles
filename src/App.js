@@ -1,13 +1,15 @@
 // Vendor imports
 import React from "react";
-import { render } from "react-dom";
+//import { render } from "react-dom";
 import { Router } from "@reach/router";
 import Picker from "./Picker";
+import "./App.css";
+import "./bootstrap.css";
 
 class App extends React.Component {
     render() {
         return (
-            <div className="main">
+            <div className="App">
                 <div className="container">
                     <header>
                         <h1>Chart Tile Picker</h1>
@@ -31,4 +33,4 @@ class App extends React.Component {
     }
 }
 
-render(<App />, document.getElementById("root"));
+export default App;

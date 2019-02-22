@@ -16,7 +16,6 @@
   "author": "Harvey Gomez",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^5.13.0",
     "eslint-config-prettier": "^4.0.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-prettier": "^3.0.1",
