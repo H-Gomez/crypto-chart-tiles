@@ -140,7 +140,7 @@ class Picker extends React.Component {
         });
     }
 
-    // Render out a Pet class for each item in the API response.
+    // Render out a selects for the chart pickers.
     render() {
         return (
             <div className="container">
