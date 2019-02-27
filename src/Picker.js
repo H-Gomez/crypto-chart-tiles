@@ -68,6 +68,7 @@ class Picker extends React.Component {
         this.handleExchangeChange = this.handleExchangeChange.bind(this);
         this.handleSymbolChange = this.handleSymbolChange.bind(this);
         this.urlBuilder = this.urlBuilder.bind(this);
+        this.handleClearSelects = this.handleClearSelects.bind(this);
     }
 
     /**
@@ -125,6 +126,21 @@ class Picker extends React.Component {
     }
 
     /**
+     * Clears all select inputs by interating over the object in state.
+     */
+    handleClearSelects() {
+        let obj = { ...this.state.selections };
+        for (var key in obj) {
+            obj[key].exchange = "";
+            obj[key].options = [];
+            obj[key].symbol = "";
+        }
+        this.setState({
+            selections: obj
+        });
+    }
+
+    /**
      * Get list of all coins from the local JSON file and create a new array
      * containing the exchange names based on the JSON keys. Set state after.
      */
@@ -144,6 +160,7 @@ class Picker extends React.Component {
     render() {
         return (
             <div className="container">
+                <a onClick={this.handleClearSelects}>Clear</a>
                 <div className="row">
                     <h4>Row 1</h4>
                     <div className="selector-wrap">
