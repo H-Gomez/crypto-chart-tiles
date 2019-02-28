@@ -102,7 +102,7 @@ class Picker extends React.Component {
         let obj = { ...this.state.selections };
         let selectorId = event.target.id.split("-")[1];
         obj[selectorId].exchange = event.target.value;
-        obj[selectorId].options = this.state.coins[event.target.value];
+        obj[selectorId].options = event.target.value === "" ? [] : this.state.coins[event.target.value];
         obj[selectorId].symbol = "";
         this.setState({
             selections: obj
