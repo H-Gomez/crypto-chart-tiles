@@ -172,7 +172,7 @@ class Picker extends React.Component {
                                 onChange={this.handleExchangeChange}
                                 onBlur={this.handleExchangeChange}
                             >
-                                <option>Select</option>
+                                <option />
                                 {this.state.exchanges.map(exchange => (
                                     <option key={exchange} value={exchange}>
                                         {exchange}
@@ -189,7 +189,6 @@ class Picker extends React.Component {
                                 onBlur={this.handleSymbolChange}
                                 disabled={this.state.selections.a1.options.length === 0}
                             >
-                                <option>Select</option>
                                 {this.state.selections.a1.options.map(exchange => (
                                     <option key={exchange} value={exchange}>
                                         {exchange}
@@ -208,7 +207,7 @@ class Picker extends React.Component {
                                 onChange={this.handleExchangeChange}
                                 onBlur={this.handleExchangeChange}
                             >
-                                <option>Select</option>
+                                <option />
                                 {this.state.exchanges.map(exchange => (
                                     <option key={exchange} value={exchange}>
                                         {exchange}
@@ -225,7 +224,6 @@ class Picker extends React.Component {
                                 onBlur={this.handleSymbolChange}
                                 disabled={this.state.selections.b1.options.length === 0}
                             >
-                                <option>Select</option>
                                 {this.state.selections.b1.options.map(exchange => (
                                     <option key={exchange} value={exchange}>
                                         {exchange}
@@ -244,7 +242,7 @@ class Picker extends React.Component {
                                 onChange={this.handleExchangeChange}
                                 onBlur={this.handleExchangeChange}
                             >
-                                <option>Select</option>
+                                <option />
                                 {this.state.exchanges.map(exchange => (
                                     <option key={exchange} value={exchange}>
                                         {exchange}
@@ -261,7 +259,6 @@ class Picker extends React.Component {
                                 onBlur={this.handleSymbolChange}
                                 disabled={this.state.selections.c1.options.length === 0}
                             >
-                                <option>Select</option>
                                 {this.state.selections.c1.options.map(exchange => (
                                     <option key={exchange} value={exchange}>
                                         {exchange}
@@ -285,7 +282,7 @@ class Picker extends React.Component {
                                 onChange={this.handleExchangeChange}
                                 onBlur={this.handleExchangeChange}
                             >
-                                <option>Select</option>
+                                <option />
                                 {this.state.exchanges.map(exchange => (
                                     <option key={exchange} value={exchange}>
                                         {exchange}
@@ -302,7 +299,6 @@ class Picker extends React.Component {
                                 onBlur={this.handleSymbolChange}
                                 disabled={this.state.selections.a2.options.length === 0}
                             >
-                                <option>Select</option>
                                 {this.state.selections.a2.options.map(exchange => (
                                     <option key={exchange} value={exchange}>
                                         {exchange}
@@ -321,7 +317,7 @@ class Picker extends React.Component {
                                 onChange={this.handleExchangeChange}
                                 onBlur={this.handleExchangeChange}
                             >
-                                <option>Select</option>
+                                <option />
                                 {this.state.exchanges.map(exchange => (
                                     <option key={exchange} value={exchange}>
                                         {exchange}
@@ -338,7 +334,6 @@ class Picker extends React.Component {
                                 onBlur={this.handleSymbolChange}
                                 disabled={this.state.selections.b2.options.length === 0}
                             >
-                                <option>Select</option>
                                 {this.state.selections.b2.options.map(exchange => (
                                     <option key={exchange} value={exchange}>
                                         {exchange}
@@ -357,7 +352,7 @@ class Picker extends React.Component {
                                 onChange={this.handleExchangeChange}
                                 onBlur={this.handleExchangeChange}
                             >
-                                <option>Select</option>
+                                <option />
                                 {this.state.exchanges.map(exchange => (
                                     <option key={exchange} value={exchange}>
                                         {exchange}
@@ -374,7 +369,6 @@ class Picker extends React.Component {
                                 onBlur={this.handleSymbolChange}
                                 disabled={this.state.selections.c2.options.length === 0}
                             >
-                                <option>Select</option>
                                 {this.state.selections.c2.options.map(exchange => (
                                     <option key={exchange} value={exchange}>
                                         {exchange}
@@ -398,7 +392,7 @@ class Picker extends React.Component {
                                 onChange={this.handleExchangeChange}
                                 onBlur={this.handleExchangeChange}
                             >
-                                <option>Select</option>
+                                <option />
                                 {this.state.exchanges.map(exchange => (
                                     <option key={exchange} value={exchange}>
                                         {exchange}
@@ -415,7 +409,6 @@ class Picker extends React.Component {
                                 onBlur={this.handleSymbolChange}
                                 disabled={this.state.selections.a3.options.length === 0}
                             >
-                                <option>Select</option>
                                 {this.state.selections.a3.options.map(exchange => (
                                     <option key={exchange} value={exchange}>
                                         {exchange}
@@ -434,7 +427,7 @@ class Picker extends React.Component {
                                 onChange={this.handleExchangeChange}
                                 onBlur={this.handleExchangeChange}
                             >
-                                <option>Select</option>
+                                <option />
                                 {this.state.exchanges.map(exchange => (
                                     <option key={exchange} value={exchange}>
                                         {exchange}
@@ -451,7 +444,6 @@ class Picker extends React.Component {
                                 onBlur={this.handleSymbolChange}
                                 disabled={this.state.selections.b3.options.length === 0}
                             >
-                                <option>Select</option>
                                 {this.state.selections.b3.options.map(exchange => (
                                     <option key={exchange} value={exchange}>
                                         {exchange}
@@ -470,7 +462,7 @@ class Picker extends React.Component {
                                 onChange={this.handleExchangeChange}
                                 onBlur={this.handleExchangeChange}
                             >
-                                <option>Select</option>
+                                <option />
                                 {this.state.exchanges.map(exchange => (
                                     <option key={exchange} value={exchange}>
                                         {exchange}
@@ -487,7 +479,6 @@ class Picker extends React.Component {
                                 onBlur={this.handleSymbolChange}
                                 disabled={this.state.selections.c3.options.length === 0}
                             >
-                                <option>Select</option>
                                 {this.state.selections.c3.options.map(exchange => (
                                     <option key={exchange} value={exchange}>
                                         {exchange}

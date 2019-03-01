@@ -28,7 +28,7 @@ jspm_packages/
 config/
 
 # VSCode
-.vscode/
+
 
 # Parcel
 .cache
