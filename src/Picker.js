@@ -103,10 +103,14 @@ class Picker extends React.Component {
         let selectorId = event.target.id.split("-")[1];
         obj[selectorId].exchange = event.target.value;
         obj[selectorId].options = event.target.value === "" ? [] : this.state.coins[event.target.value];
-        obj[selectorId].symbol = "";
-        this.setState({
-            selections: obj
-        });
+        obj[selectorId].symbol = this.state.coins[event.target.value][0];
+
+        this.setState(
+            {
+                selections: obj
+            },
+            this.urlBuilder
+        );
     }
 
     /**
@@ -117,6 +121,7 @@ class Picker extends React.Component {
         let obj = { ...this.state.selections };
         let selectorId = event.target.id.split("-")[1];
         obj[selectorId].symbol = event.target.value;
+
         this.setState(
             {
                 selections: obj
@@ -135,8 +140,10 @@ class Picker extends React.Component {
             obj[key].options = [];
             obj[key].symbol = "";
         }
+
         this.setState({
-            selections: obj
+            selections: obj,
+            targetUrl: ""
         });
     }
 
