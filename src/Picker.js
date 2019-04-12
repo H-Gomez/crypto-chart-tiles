@@ -70,6 +70,7 @@ class Picker extends React.Component {
         this.handleSymbolChange = this.handleSymbolChange.bind(this);
         this.urlBuilder = this.urlBuilder.bind(this);
         this.handleClearSelects = this.handleClearSelects.bind(this);
+        this.handleButtonClick = this.handleButtonClick.bind(this);
     }
 
     /**
@@ -146,6 +147,11 @@ class Picker extends React.Component {
             selections: obj,
             targetUrl: ""
         });
+    }
+
+    handleButtonClick() {
+        window.open(this.state.targetUrl, '_blank');
+
     }
 
     /**
@@ -267,12 +273,9 @@ class Picker extends React.Component {
                     href={this.state.targetUrl}
                     className="btn btn-primary"
                     disabled={this.state.targetUrl === "" ? true : false}
+                    onClick={this.handleButtonClick}
                 >
-                    Get Charts{" "}
-                    <span role="img" aria-label="rocket">
-                        {" "}
-                        🚀
-                    </span>
+                    Get Charts
                 </button>
             </div>
         );
