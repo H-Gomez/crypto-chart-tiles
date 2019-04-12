@@ -1,5 +1,6 @@
 import React from "react";
 import allCoins from "./symbols.json";
+import Selector from "./Selector";
 import "./App.css";
 
 /**
@@ -114,8 +115,8 @@ class Picker extends React.Component {
     }
 
     /**
-     * Handle the Symbol select change.
-     *
+     * Handle the Symbol select change by setting state with the
+     * respective selection objects symbol.
      */
     handleSymbolChange(event) {
         let obj = { ...this.state.selections };
@@ -170,335 +171,109 @@ class Picker extends React.Component {
                 <a onClick={this.handleClearSelects}>Clear</a>
                 <div className="row">
                     <h4>Row 1</h4>
-                    <div className="selector-wrap">
-                        <label htmlFor="exchange-a1">
-                            Exchange
-                            <select
-                                id="exchange-a1"
-                                value={this.state.selections.a1.exchange}
-                                onChange={this.handleExchangeChange}
-                                onBlur={this.handleExchangeChange}
-                            >
-                                <option />
-                                {this.state.exchanges.map(exchange => (
-                                    <option key={exchange} value={exchange}>
-                                        {exchange}
-                                    </option>
-                                ))}
-                            </select>
-                        </label>
-                        <label htmlFor="symbol-a1">
-                            Symbol
-                            <select
-                                id="symbol-a1"
-                                value={this.state.selections.a1.symbol}
-                                onChange={this.handleSymbolChange}
-                                onBlur={this.handleSymbolChange}
-                                disabled={this.state.selections.a1.options.length === 0}
-                            >
-                                {this.state.selections.a1.options.map(exchange => (
-                                    <option key={exchange} value={exchange}>
-                                        {exchange}
-                                    </option>
-                                ))}
-                            </select>
-                        </label>
-                    </div>
+                    <Selector
+                        identifier="a1"
+                        selections={this.state.selections}
+                        coins={this.state.coins}
+                        exchanges={this.state.exchanges}
+                        handleExchangeChange={this.handleExchangeChange}
+                        handleSymbolChange={this.handleSymbolChange}
+                    />
 
-                    <div className="selector-wrap">
-                        <label htmlFor="exchange-b1">
-                            Exchange
-                            <select
-                                id="exchange-b1"
-                                value={this.state.selections.b1.exchange}
-                                onChange={this.handleExchangeChange}
-                                onBlur={this.handleExchangeChange}
-                            >
-                                <option />
-                                {this.state.exchanges.map(exchange => (
-                                    <option key={exchange} value={exchange}>
-                                        {exchange}
-                                    </option>
-                                ))}
-                            </select>
-                        </label>
-                        <label htmlFor="symbol-b1">
-                            Symbol
-                            <select
-                                id="symbol-b1"
-                                value={this.state.selections.b1.symbol}
-                                onChange={this.handleSymbolChange}
-                                onBlur={this.handleSymbolChange}
-                                disabled={this.state.selections.b1.options.length === 0}
-                            >
-                                {this.state.selections.b1.options.map(exchange => (
-                                    <option key={exchange} value={exchange}>
-                                        {exchange}
-                                    </option>
-                                ))}
-                            </select>
-                        </label>
-                    </div>
+                    <Selector
+                        identifier="b1"
+                        selections={this.state.selections}
+                        coins={this.state.coins}
+                        exchanges={this.state.exchanges}
+                        handleExchangeChange={this.handleExchangeChange}
+                        handleSymbolChange={this.handleSymbolChange}
+                    />
 
-                    <div className="selector-wrap">
-                        <label htmlFor="exchange-c1">
-                            Exchange
-                            <select
-                                id="exchange-c1"
-                                value={this.state.selections.c1.exchange}
-                                onChange={this.handleExchangeChange}
-                                onBlur={this.handleExchangeChange}
-                            >
-                                <option />
-                                {this.state.exchanges.map(exchange => (
-                                    <option key={exchange} value={exchange}>
-                                        {exchange}
-                                    </option>
-                                ))}
-                            </select>
-                        </label>
-                        <label htmlFor="symbol-c1">
-                            Symbol
-                            <select
-                                id="symbol-c1"
-                                value={this.state.selections.c1.symbol}
-                                onChange={this.handleSymbolChange}
-                                onBlur={this.handleSymbolChange}
-                                disabled={this.state.selections.c1.options.length === 0}
-                            >
-                                {this.state.selections.c1.options.map(exchange => (
-                                    <option key={exchange} value={exchange}>
-                                        {exchange}
-                                    </option>
-                                ))}
-                            </select>
-                        </label>
-                    </div>
+                    <Selector
+                        identifier="c1"
+                        selections={this.state.selections}
+                        coins={this.state.coins}
+                        exchanges={this.state.exchanges}
+                        handleExchangeChange={this.handleExchangeChange}
+                        handleSymbolChange={this.handleSymbolChange}
+                    />
                 </div>
 
                 {/* ------ New Row ------*/}
 
                 <div className="row">
                     <h4>Row 2</h4>
-                    <div className="selector-wrap">
-                        <label htmlFor="exchange-a2">
-                            Exchange
-                            <select
-                                id="exchange-a2"
-                                value={this.state.selections.a2.exchange}
-                                onChange={this.handleExchangeChange}
-                                onBlur={this.handleExchangeChange}
-                            >
-                                <option />
-                                {this.state.exchanges.map(exchange => (
-                                    <option key={exchange} value={exchange}>
-                                        {exchange}
-                                    </option>
-                                ))}
-                            </select>
-                        </label>
-                        <label htmlFor="symbol-a2">
-                            Symbol
-                            <select
-                                id="symbol-a2"
-                                value={this.state.selections.a2.symbol}
-                                onChange={this.handleSymbolChange}
-                                onBlur={this.handleSymbolChange}
-                                disabled={this.state.selections.a2.options.length === 0}
-                            >
-                                {this.state.selections.a2.options.map(exchange => (
-                                    <option key={exchange} value={exchange}>
-                                        {exchange}
-                                    </option>
-                                ))}
-                            </select>
-                        </label>
-                    </div>
+                    <Selector
+                        identifier="a2"
+                        selections={this.state.selections}
+                        coins={this.state.coins}
+                        exchanges={this.state.exchanges}
+                        handleExchangeChange={this.handleExchangeChange}
+                        handleSymbolChange={this.handleSymbolChange}
+                    />
 
-                    <div className="selector-wrap">
-                        <label htmlFor="exchange-b2">
-                            Exchange
-                            <select
-                                id="exchange-b2"
-                                value={this.state.selections.b2.exchange}
-                                onChange={this.handleExchangeChange}
-                                onBlur={this.handleExchangeChange}
-                            >
-                                <option />
-                                {this.state.exchanges.map(exchange => (
-                                    <option key={exchange} value={exchange}>
-                                        {exchange}
-                                    </option>
-                                ))}
-                            </select>
-                        </label>
-                        <label htmlFor="symbol-b2">
-                            Symbol
-                            <select
-                                id="symbol-b2"
-                                value={this.state.selections.b2.symbol}
-                                onChange={this.handleSymbolChange}
-                                onBlur={this.handleSymbolChange}
-                                disabled={this.state.selections.b2.options.length === 0}
-                            >
-                                {this.state.selections.b2.options.map(exchange => (
-                                    <option key={exchange} value={exchange}>
-                                        {exchange}
-                                    </option>
-                                ))}
-                            </select>
-                        </label>
-                    </div>
+                    <Selector
+                        identifier="b2"
+                        selections={this.state.selections}
+                        coins={this.state.coins}
+                        exchanges={this.state.exchanges}
+                        handleExchangeChange={this.handleExchangeChange}
+                        handleSymbolChange={this.handleSymbolChange}
+                    />
 
-                    <div className="selector-wrap">
-                        <label htmlFor="exchange-c2">
-                            Exchange
-                            <select
-                                id="exchange-c2"
-                                value={this.state.selections.c2.exchange}
-                                onChange={this.handleExchangeChange}
-                                onBlur={this.handleExchangeChange}
-                            >
-                                <option />
-                                {this.state.exchanges.map(exchange => (
-                                    <option key={exchange} value={exchange}>
-                                        {exchange}
-                                    </option>
-                                ))}
-                            </select>
-                        </label>
-                        <label htmlFor="symbol-c2">
-                            Symbol
-                            <select
-                                id="symbol-c2"
-                                value={this.state.selections.c2.symbol}
-                                onChange={this.handleSymbolChange}
-                                onBlur={this.handleSymbolChange}
-                                disabled={this.state.selections.c2.options.length === 0}
-                            >
-                                {this.state.selections.c2.options.map(exchange => (
-                                    <option key={exchange} value={exchange}>
-                                        {exchange}
-                                    </option>
-                                ))}
-                            </select>
-                        </label>
-                    </div>
+                    <Selector
+                        identifier="c2"
+                        selections={this.state.selections}
+                        coins={this.state.coins}
+                        exchanges={this.state.exchanges}
+                        handleExchangeChange={this.handleExchangeChange}
+                        handleSymbolChange={this.handleSymbolChange}
+                    />
                 </div>
 
                 {/* ------ New Row ------*/}
 
                 <div className="row">
                     <h4>Row 3</h4>
-                    <div className="selector-wrap">
-                        <label htmlFor="exchange-a3">
-                            Exchange
-                            <select
-                                id="exchange-a3"
-                                value={this.state.selections.a3.exchange}
-                                onChange={this.handleExchangeChange}
-                                onBlur={this.handleExchangeChange}
-                            >
-                                <option />
-                                {this.state.exchanges.map(exchange => (
-                                    <option key={exchange} value={exchange}>
-                                        {exchange}
-                                    </option>
-                                ))}
-                            </select>
-                        </label>
-                        <label htmlFor="symbol-a3">
-                            Symbol
-                            <select
-                                id="symbol-a3"
-                                value={this.state.selections.a3.symbol}
-                                onChange={this.handleSymbolChange}
-                                onBlur={this.handleSymbolChange}
-                                disabled={this.state.selections.a3.options.length === 0}
-                            >
-                                {this.state.selections.a3.options.map(exchange => (
-                                    <option key={exchange} value={exchange}>
-                                        {exchange}
-                                    </option>
-                                ))}
-                            </select>
-                        </label>
-                    </div>
+                    <Selector
+                        identifier="a3"
+                        selections={this.state.selections}
+                        coins={this.state.coins}
+                        exchanges={this.state.exchanges}
+                        handleExchangeChange={this.handleExchangeChange}
+                        handleSymbolChange={this.handleSymbolChange}
+                    />
 
-                    <div className="selector-wrap">
-                        <label htmlFor="exchange-b3">
-                            Exchange
-                            <select
-                                id="exchange-b3"
-                                value={this.state.selections.b3.exchange}
-                                onChange={this.handleExchangeChange}
-                                onBlur={this.handleExchangeChange}
-                            >
-                                <option />
-                                {this.state.exchanges.map(exchange => (
-                                    <option key={exchange} value={exchange}>
-                                        {exchange}
-                                    </option>
-                                ))}
-                            </select>
-                        </label>
-                        <label htmlFor="symbol-b3">
-                            Symbol
-                            <select
-                                id="symbol-b3"
-                                value={this.state.selections.b3.symbol}
-                                onChange={this.handleSymbolChange}
-                                onBlur={this.handleSymbolChange}
-                                disabled={this.state.selections.b3.options.length === 0}
-                            >
-                                {this.state.selections.b3.options.map(exchange => (
-                                    <option key={exchange} value={exchange}>
-                                        {exchange}
-                                    </option>
-                                ))}
-                            </select>
-                        </label>
-                    </div>
+                    <Selector
+                        identifier="b3"
+                        selections={this.state.selections}
+                        coins={this.state.coins}
+                        exchanges={this.state.exchanges}
+                        handleExchangeChange={this.handleExchangeChange}
+                        handleSymbolChange={this.handleSymbolChange}
+                    />
 
-                    <div className="selector-wrap">
-                        <label htmlFor="exchange-c3">
-                            Exchange
-                            <select
-                                id="exchange-c3"
-                                value={this.state.selections.c3.exchange}
-                                onChange={this.handleExchangeChange}
-                                onBlur={this.handleExchangeChange}
-                            >
-                                <option />
-                                {this.state.exchanges.map(exchange => (
-                                    <option key={exchange} value={exchange}>
-                                        {exchange}
-                                    </option>
-                                ))}
-                            </select>
-                        </label>
-                        <label htmlFor="symbol-c3">
-                            Symbol
-                            <select
-                                id="symbol-c3"
-                                value={this.state.selections.c3.symbol}
-                                onChange={this.handleSymbolChange}
-                                onBlur={this.handleSymbolChange}
-                                disabled={this.state.selections.c3.options.length === 0}
-                            >
-                                {this.state.selections.c3.options.map(exchange => (
-                                    <option key={exchange} value={exchange}>
-                                        {exchange}
-                                    </option>
-                                ))}
-                            </select>
-                        </label>
-                    </div>
+                    <Selector
+                        identifier="c3"
+                        selections={this.state.selections}
+                        coins={this.state.coins}
+                        exchanges={this.state.exchanges}
+                        handleExchangeChange={this.handleExchangeChange}
+                        handleSymbolChange={this.handleSymbolChange}
+                    />
                 </div>
 
-                <a href={this.state.targetUrl} className="btn btn-primary">
-                    Get Charts <span>🚀</span>
-                </a>
+                <button
+                    href={this.state.targetUrl}
+                    className="btn btn-primary"
+                    disabled={this.state.targetUrl === "" ? true : false}
+                >
+                    Get Charts{" "}
+                    <span role="img" aria-label="rocket">
+                        {" "}
+                        🚀
+                    </span>
+                </button>
             </div>
         );
     }
